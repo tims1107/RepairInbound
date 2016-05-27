@@ -1,0 +1,52 @@
+
+    [
+    	{type:oracle,name:oracle_eleveng,server:njrr-scan,port:1521,username:wh_track,password:wh6track,servicename:dwprd,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//njrr-scan:1521/dwprd',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_dev,server:njifacedev1,port:1521,username:system,password:Twsm8976,servicename:xe,drivertype:thin,protocol:tcp},
+      	{type:oracle,name:oracle_prod,server:reportdb1,port:1520,username:wh_track,password:wh6track,servicename:dwprd1,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//reportdb1:1521/dwprd1',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_hlab,server:10.16.190.226,port:1521,username:pwluser,password:pwluser,servicename:prod.world,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//10.16.190.226:1521/prod.world',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_trac,server:tracdb1-scan.spectraeastnj.com,port:1521,username:MDPTRAC,password:MDPTRAC,servicename:tracprde,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//tracdb1-scan.spectraeastnj.com:1521/tracprde',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_trac_prode,server:tracdb1-scan.spectra.com,port:1521,username:mdptrac,password:mdptrac,servicename:tracprde,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//njoracprod02.spectraeastnj.com:1521/mdprod01',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_trac_prodw,server:tracdb1-scan.spectranj.com,port:1521,username:MDPTRAC,password:MDPTRAC,servicename:tracprdw,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//tracdb1-scan.spectraeastnj.com:1521/tracprdw',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_tracstage,server:njdev1-scan.spectraeastnj.com,port:1521,username:mdptrac,password:mdptrac,servicename:tractst,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//njdev1-scan.spectraeastnj.com:1521/tractst',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_tracstagewest,server:njdev1-scan.spectraeastnj.com,port:1521,username:mdptrac,password:mdptrac,servicename:tracdevw,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//njdev1-scan.spectraeastnj.com:1521/tracdevw',driver:oracle.jdbc.driver.OracleDriver},
+      	{type:oracle,name:oracle_hlab_ca,server:calabd01-vip.spectra.com,port:1521,username:pwluser,password:pwluser,servicename:prod.world,drivertype:thin,protocol:tcp,uri:'jdbc:oracle:thin:@//calabd01-vip.spectra.com:1521/prod.world',driver:oracle.jdbc.driver.OracleDriver,validquery:"select 1 from dual"},
+      	{type:sqlserver,name:njsqlprod3,server:njsqlprod3,port:1433,username:rcgdbo,password:rcg_32!,database:rcgprod,uri:"jdbc:jtds:sqlserver://njsqlprod3/RCGPROD",driver:net.sourceforge.jtds.jdbc.Driver,validquery: "select 1"}, 
+      	{type:sqlserver,name:njsqldevelop64,server:njsqldevelop64,port:1433,username:rcgqa,password:Twsm8976,database:RCG_QA,uri:"jdbc:jtds:sqlserver://njsqldevelop64/RCG_QA",driver:net.sourceforge.jtds.jdbc.Driver,validquery:"select 1"}, 
+      	{type:sqlserver,name:njsqldevelop64_dev,server:njsqldevelop64,port:1433,username:rcgqa,password:Twsm8976,database:RCG_DEV,uri:"jdbc:jtds:sqlserver://njsqldevelop64/RCG_DEV",driver:net.sourceforge.jtds.jdbc.Driver}, 
+      	{type:sqlserver,name:fmcnjsql,server:fmcnjsql,port:1433,username:sa,password:sa,database:CDBHLab},
+      	{type:sqlserver,name:njsql2008_dev,server:njsqldev01,port:1433,username:rcgdev_dbo,password:Rcgd0v_123,database:rcgdev},
+      	{type:sqlserver,name:njsql2008_qa,server:njsqltest01,port:1433,username:rcgqa_dbo,password:Rcgq0_123,database:rcgqa},
+      	{type:sqlserver,name:njsql2008_reflab,server:njsqltest01,port:1433,username:pricecost_user,password:Price_123,database:RefLab,uri:"jdbc:jtds:sqlserver://njsqltest01/RefLab",driver:net.sourceforge.jtds.jdbc.Driver}, 
+      	{type:sqlserver,name:njsql2008_reflab_prod,server:NJSQLPROD04,port:1433,username:pricecost_user,password:pr1ce_C0st,database:RefLab,uri:"jdbc:jtds:sqlserver://njsqlprod04/RefLab",driver:net.sourceforge.jtds.jdbc.Driver}, 
+      	{type:sqlserver,name:njsql2008_reflab_dev,server:njsqldev01,port:1433,username:pricecost_user,password:Price_dev,database:RefLab,uri:"jdbc:jtds:sqlserver://njsqldev01/RefLab",driver:net.sourceforge.jtds.jdbc.Driver}, 
+      	{type:sqlserver,name:njsqlprod04,server:njsqlprod04,port:1433,username:readcd,password:Read_Sq123,database:CDBHLab},
+      	{type:sqlserver,name:njsqldevelop1,server:njsqldevelop1,port:1433,username:readcd,password:readcd,database:CDBHLab},
+      	{type:mysql,name:njapp01_mysql,server:njweb,port:3306,username:root,password:Twsm8976,database:test,uri:'jdbc:mysql://njweb/test',driver:com.mysql.jdbc.Driver},
+      	{type:mysql,name:qa_mysql,server:njapp01,port:3306,username:root,password:twsm8976,database:test,uri:'jdbc:mysql://njapp01/test',driver:com.mysql.jdbc.Driver},
+       	{type:cache,name:ensemblevip_cache_initiate,server:ensemblevip,port:1972,username:jdbcuser,password:letmein,database:initiate},
+       	{type:cache,name:ensemblevip_cache_hlab,server:ensemblevip,port:1972,username:jdbcuser,password:letmein,database:hlab,uri:'jdbc:Cache://ensemblevip:1972/HLAB',driver:com.intersys.jdbc.CacheDriver},
+        {type:cache,name:ensemblevip_cache_westhlab,server:ensemblevip,port:1972,username:jdbcuser,password:letmein,database:westhlab,uri:'jdbc:Cache://ensemblevip:1972/westhlab',driver:com.intersys.jdbc.CacheDriver},
+       	{type:cache,name:ensemblevip_cache_soarian,server:ensemblevip,port:1972,username:jdbcuser,password:letmein,database:soarian,uri:'jdbc:Cache://ensemblevip:1972/soarian',driver:com.intersys.jdbc.CacheDriver},
+       	{type:cache,name:ensembletemp_cache,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:hlab},
+       	{type:cache,name:ensembletemp_cache_soarian,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:soarian,uri:'jdbc:Cache://ensembletemp:56773/soarian',driver:com.intersys.jdbc.CacheDriver},
+       	{type:cache,name:ensembletemp_cache_hlab,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:hlab},
+       	{type:cache,name:ensembletemp_cache_westhlab,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:westhlab},
+       	{type:cache,name:ensembletemp_cache_initiate,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:initiate},
+       	{type:cache,name:ensemblevip_cache_extinterfaces,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:extinterfaces},
+       	{type:cache,name:ensemblevip_cache_soarianwest,server:ensembletemp,port:56773,username:jdbcuser,password:letmein,database:soarianwest},
+       	{type:postgresql,name:njifacedev1_postgresql,server:njifacedev1,port:0,username:postgres,password:twsm8976,database:postgres},
+       	{type:postgresql,name:njifacedev1_postgresql_dup,server:njifacedev1,port:0,username:postgres,password:twsm8976,param:0},
+       	{type:send,name:ensembletemp_send,server:ensembletemp,port:5005,source:OSU-RETURN},
+       	{type:send,name:ensembletemp_sendqa_east,server:ensembletemp,port:6090,source:HLAB-SOARIAN-EAST},
+       	{type:send,name:ensembletemp_sendqa_west,server:ensembletemp,port:10218,source:HLAB-SOARIAN-WEST},
+       	{type:send,name:ensembletemp_sendqa_osu,server:ensembletemp,port:6094,source:OSU-RETURN},
+       	{type:send,name:ensembletemp_osu_qa,server:ensembletemp,port:10218},
+       	{type:listener,name:listener,server:localhost,port:4002},
+       	{type:timer,name:scheduler,minutes:2,starttime:-24}
+
+
+
+    ]
+ 
+   
+ 

@@ -1,0 +1,44 @@
+<configuration debug="true">
+
+	   <timestamp key="byDay" datePattern="yyyyMMdd'T'HHmmss"/>
+
+	 
+
+	   <appender name="STDOUT" class="ch.qos.logback.core.ConsoleAppender">
+
+	      <encoder>
+
+	         <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%thread] %-5level %logger{36} - %msg%n</pattern>
+
+	      </encoder>
+
+	   </appender>
+
+	 
+
+	   <appender name="milliroller" class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>log/output.log</file>
+        
+        <layout class="ch.qos.logback.classic.PatternLayout">
+            <pattern>%d{yyyy-MM-dd HH:mm:ss.SSS} [%logger] %-5level %logger - %msg%n</pattern>
+        </layout>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>log/mylog-%d{yyyy-MM-dd}.%i.txt</fileNamePattern>
+            <timeBasedFileNamingAndTriggeringPolicy class="ch.qos.logback.core.rolling.SizeAndTimeBasedFNATP">
+                <maxFileSize>10KB</maxFileSize>
+            </timeBasedFileNamingAndTriggeringPolicy>
+        </rollingPolicy>
+    </appender>
+    
+    <logger name="org.mongodb" level="WARN"/>
+    
+    <logger name="org.vibur.dbcp" additivity="false" level="ERROR" />
+    
+
+    <root level="INFO">
+        <appender-ref ref="STDOUT"/>
+        
+    </root>
+	 
+
+	</configuration>
