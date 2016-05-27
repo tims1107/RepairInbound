@@ -71,6 +71,7 @@ public class Main {
 		if(args.length == 0) return;
 		
 		try {
+			logger.info(args[0]);
 			new Main(args[0]);
 		} catch (JoranException e) {
 			logger.error(e.getMessage());
